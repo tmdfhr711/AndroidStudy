@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">BottomUpSheetDialog</string>
+
+    <!-- activity_main resource -->
+    <string name="show_bottomup_button">SHOW BOTTOM UP</string>
+
+    <!-- bottomup sheet recource-->
+    <string name="bottomup_cate1">CATEGORY #1</string>
+    <string name="bottomup_cate2">CATEGORY #2</string>
+    <string name="bottomup_cancel">CANCEL</string>
 </resources>

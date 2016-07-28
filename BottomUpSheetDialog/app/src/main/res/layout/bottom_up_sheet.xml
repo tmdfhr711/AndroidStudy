@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="bottom|center"
+    android:padding="10dp"
+    android:background="@android:color/white"
+    tools:context="example.android.laioh.bottomupsheetdialog.BottomUpSheet">
+
+    <TextView
+        android:id="@+id/bottomup_cate1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/bottomup_cate1"/>
+
+    <TextView
+        android:id="@+id/bottomup_cate2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/bottomup_cate2"/>
+
+    <TextView
+        android:id="@+id/bottomup_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/holo_red_light"
+        android:text="@string/bottomup_cancel"/>
+</LinearLayout>
