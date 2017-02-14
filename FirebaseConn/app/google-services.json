@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1014573073695",
+    "firebase_url": "https://fir-conn-30a41.firebaseio.com",
+    "project_id": "fir-conn-30a41",
+    "storage_bucket": "fir-conn-30a41.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1014573073695:android:5387f6471092ef69",
+        "android_client_info": {
+          "package_name": "example.android.laioh.firebaseconn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1014573073695-oft4qvpue5p2ej133fldm6r9osjl6ot9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIswSN3E5_rlHdNINk_-BNmjCxN-xrXgo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
