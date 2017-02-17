@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "448563675548",
+    "firebase_url": "https://fir-auth-cfc81.firebaseio.com",
+    "project_id": "fir-auth-cfc81",
+    "storage_bucket": "fir-auth-cfc81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448563675548:android:4d122a0c99a8d945",
+        "android_client_info": {
+          "package_name": "example.android.laioh.firebaseauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "448563675548-flp4vjj0j6lnuvinbs080aq98vu5onn3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgEsgNTe7x3n-Yg7bNE3wjgRUql8yWlUo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
