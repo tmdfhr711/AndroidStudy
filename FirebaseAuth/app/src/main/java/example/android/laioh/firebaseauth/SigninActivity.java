@@ -17,20 +17,21 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class SigninActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private Button registerButton;
+    private Button signin_btn;
     private EditText email_edt;
     private EditText password_edt;
-    private TextView signin_tv;
+    private TextView signup_tv;
 
     private ProgressDialog mProgressDialog;
 
     private FirebaseAuth mFirebaseAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_signin);
 
         mProgressDialog = new ProgressDialog(this);
 
@@ -42,18 +43,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
         }
 
-        registerButton = (Button) findViewById(R.id.regist_btn);
+        signin_btn = (Button) findViewById(R.id.signin_btn);
         email_edt = (EditText) findViewById(R.id.email_edt);
         password_edt = (EditText) findViewById(R.id.password_edt);
+        signup_tv = (TextView) findViewById(R.id.textViewSignUp);
 
-        signin_tv = (TextView) findViewById(R.id.textViewSignin);
-
-        registerButton.setOnClickListener(this);
-        signin_tv.setOnClickListener(this);
+        signin_btn.setOnClickListener(this);
+        signup_tv.setOnClickListener(this);
     }
 
 
-    private void registerUser(){
+    private void userLogin(){
         String email = email_edt.getText().toString();
         String password = password_edt.getText().toString();
 
@@ -73,35 +73,39 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mProgressDialog.setMessage("Registering User...");
         mProgressDialog.show();
 
-        mFirebaseAuth.createUserWithEmailAndPassword(email, password)
+        mFirebaseAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+                        mProgressDialog.dismiss();
                         if (task.isSuccessful()) {
-                            //user is successfullt registered and logged in
-                            //we will tart the profile activity here
-                            //right now lets display a toast only
+                            //start the profile actiity
                             finish();
                             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
-                            mProgressDialog.dismiss();
-                        } else {
-                            Toast.makeText(MainActivity.this, "Could not register ... please try again", Toast.LENGTH_SHORT).show();
-                            mProgressDialog.dismiss();
                         }
                     }
                 });
+
     }
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.regist_btn :
-                registerUser();
+            case R.id.signin_btn :
+                    userLogin();
                 break;
 
-            case R.id.textViewSignin :
+            case R.id.textViewSignUp :
+                startActivity(new Intent(this, MainActivity.class));
                 finish();
-                startActivity(new Intent(this, SigninActivity.class));
                 break;
+
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
     }
 }
